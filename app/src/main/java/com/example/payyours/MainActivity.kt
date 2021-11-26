@@ -1,11 +1,13 @@
 package com.example.payyours
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,5 +36,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         return result
+    }
+
+    private val getResult = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        if (it.resultCode == Activity.RESULT_OK) {
+            val value = it.data?.getStringExtra("input")
+        }
+
+        // payment = SettingsActivity.getStoredPayment(this)
     }
 }
