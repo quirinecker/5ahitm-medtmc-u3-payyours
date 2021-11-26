@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Spieler"
+        android:text="@string/settings_label_player"
         app:layout_constraintStart_toStartOf="@+id/label_guidline"
         app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_marginTop="15dp"
-        android:text="Preis je Platz"
+        android:text="@string/settings_label_price"
         app:layout_constraintStart_toStartOf="@+id/label_guidline"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Plätze"
+        android:text="@string/settings_label_place"
         app:layout_constraintStart_toStartOf="@+id/label_guidline"
         app:layout_constraintTop_toBottomOf="@+id/tv_place" />
 
@@ -39,11 +39,14 @@
         android:layout_width="136dp"
         android:layout_height="48dp"
         android:layout_marginStart="5dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/settings_hint_text"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_place"
         app:layout_constraintEnd_toStartOf="@+id/end_guidline"
         app:layout_constraintStart_toEndOf="@+id/tv_barrier"
+        tools:ignore="DuplicateSpeakableTextCheck"
         tools:text="0" />
 
     <EditText
@@ -51,7 +54,9 @@
         android:layout_width="136dp"
         android:layout_height="48dp"
         android:layout_marginStart="5dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/settings_hint_text"
         android:inputType="numberDecimal"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_price"
         app:layout_constraintEnd_toStartOf="@+id/end_guidline"
@@ -63,7 +68,9 @@
         android:layout_width="136dp"
         android:layout_height="48dp"
         android:layout_marginStart="5dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="@string/settings_hint_text"
         android:inputType="numberDecimal"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_player"
         app:layout_constraintEnd_toStartOf="@+id/end_guidline"
@@ -90,7 +97,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Submit"
+        android:text="@string/settings_submit_button"
         app:layout_constraintEnd_toEndOf="@+id/et_player"
         app:layout_constraintStart_toStartOf="@+id/tv_player"
         app:layout_constraintTop_toBottomOf="@+id/et_player" />

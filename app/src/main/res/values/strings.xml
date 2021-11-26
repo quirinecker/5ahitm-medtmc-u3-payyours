@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">PayYours</string>
     <string name="settings">Settings</string>
-    <string name="exit">Exit</string>
+    <string name="label_exit">Exit</string>
     <string name="label_edit_settings">Edit Settings</string>
+    <string name="settings_label_player">Spieler</string>
+    <string name="settings_label_price">Preis je Platz</string>
+    <string name="settings_label_place">Plätze</string>
+    <string name="settings_submit_button">Submit</string>
+    <string name="settings_hint_text">15</string>
 </resources>
