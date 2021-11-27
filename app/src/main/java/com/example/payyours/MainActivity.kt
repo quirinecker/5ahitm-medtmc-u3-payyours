@@ -7,12 +7,34 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.EditText
 import androidx.activity.result.contract.ActivityResultContracts
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        buttonPlacePlus.setOnClickListener { addToValue(fieldPlace) }
+        buttonPlayerPlus.setOnClickListener { addToValue(fieldPlayer) }
+        buttonPlayerMinus.setOnClickListener { substractFromValue(fieldPlayer) }
+        buttonPlaceMinus.setOnClickListener { substractFromValue(fieldPlace) }
+
+    }
+
+    private fun substractFromValue(field: EditText?) {
+        changeValue(field, -1)
+    }
+
+    private fun addToValue(field: EditText?) {
+        changeValue(field, +1)
+    }
+
+    private fun changeValue(field: EditText?, factor: Int) {
+        val current = Integer.parseInt(field?.text.toString())
+        val new = current + factor
+        field?.setText("$new")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
