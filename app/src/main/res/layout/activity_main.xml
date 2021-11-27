@@ -48,7 +48,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/main_label_place"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/guidline_top" />
 
@@ -56,7 +56,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/main_label_player"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -65,7 +65,7 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/main_label_value"
             app:layout_constraintBottom_toTopOf="@+id/guidline_bottom"
             app:layout_constraintStart_toStartOf="@+id/guideline2" />
 
@@ -82,62 +82,57 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:ems="10"
+            android:hint="@string/default_number_value"
+            android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:text="5"
+            android:text="@string/default_number_value"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/barrier2" />
+            app:layout_constraintStart_toStartOf="@+id/barrier2"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <EditText
             android:id="@+id/editTextNumberDecimal2"
+            android:hint="@string/default_number_value"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:ems="10"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
-            android:text="5"
+            android:text="@string/default_number_value"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-            app:layout_constraintStart_toEndOf="@+id/barrier2" />
-
-        <EditText
-            android:id="@+id/editTextNumberDecimal3"
-            android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:ems="10"
-            android:inputType="numberDecimal"
-            android:minHeight="48dp"
-            android:text="5"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/barrier2" />
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            android:importantForAutofill="no" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
-            android:text="+"
+            android:text="@string/main_button_plus"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberDecimal"
             app:layout_constraintEnd_toStartOf="@+id/button4"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal" />
+            app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:text="-"
+            android:text="@string/main_button_minus"
             app:layout_constraintBaseline_toBaselineOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_weight="1" />
+            app:layout_constraintVertical_weight="1"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
+            android:text="@string/main_button_plus"
             app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberDecimal2"
             app:layout_constraintEnd_toStartOf="@+id/button8"
             app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal2"
@@ -147,29 +142,19 @@
             android:id="@+id/button8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="-"
+            android:text="@string/main_button_minus"
             app:layout_constraintBaseline_toBaselineOf="@+id/button7"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintVertical_weight="1" />
 
-        <Button
-            android:id="@+id/button9"
+        <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberDecimal3"
-            app:layout_constraintEnd_toStartOf="@+id/button10"
-            app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal3"
-            app:layout_constraintVertical_weight="1" />
-
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button9"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintVertical_weight="1" />
+            android:layout_marginStart="16dp"
+            android:text="@string/main_label_awaiting_value"
+            app:layout_constraintBottom_toTopOf="@+id/guidline_bottom"
+            app:layout_constraintStart_toEndOf="@+id/barrier2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

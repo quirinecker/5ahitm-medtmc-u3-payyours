@@ -8,4 +8,12 @@
     <string name="settings_label_place">Plätze</string>
     <string name="settings_submit_button">Submit</string>
     <string name="settings_hint_text">15</string>
+    <string name="default_number_value">5</string>
+    <string name="main_button_plus">+</string>
+    <string name="main_button_minus">-</string>
+    <string name="main_label_awaiting_value">…</string>
+    <string name="main_label_place">Plätze:</string>
+    <string name="spieler">main_label_player</string>
+    <string name="main_label_value">Betrag:</string>
+    <string name="main_label_player">Spieler:</string>
 </resources>
