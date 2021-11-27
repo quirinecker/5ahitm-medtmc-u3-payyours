@@ -16,68 +16,68 @@
         app:layout_constraintVertical_bias="0.060000002">
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
+            android:id="@+id/guidlineRight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_end="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidline_top"
+            android:id="@+id/guidlineTop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_begin="19dp" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guidline_bottom"
+            android:id="@+id/guidlineBottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_end="19dp" />
 
         <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier2"
+            android:id="@+id/barrierLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="right"
-            app:constraint_referenced_ids="textView3,textView2,textView"
+            app:constraint_referenced_ids="labelValue,labelPlayer,labelPlace"
             tools:layout_editor_absoluteX="74dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/labelPlace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main_label_place"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toTopOf="@+id/guidline_top" />
+            app:layout_constraintStart_toStartOf="@+id/guildlineLeft"
+            app:layout_constraintTop_toTopOf="@+id/guidlineTop" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/labelPlayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main_label_player"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
-            app:layout_constraintStart_toStartOf="@+id/guideline2"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintBottom_toTopOf="@+id/labelValue"
+            app:layout_constraintStart_toStartOf="@+id/guildlineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/labelPlace" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/labelValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main_label_value"
-            app:layout_constraintBottom_toTopOf="@+id/guidline_bottom"
-            app:layout_constraintStart_toStartOf="@+id/guideline2" />
+            app:layout_constraintBottom_toTopOf="@+id/guidlineBottom"
+            app:layout_constraintStart_toStartOf="@+id/guildlineLeft" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
+            android:id="@+id/guildlineLeft"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="16dp" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/fieldPlace"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -87,12 +87,12 @@
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:text="@string/default_number_value"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/barrier2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelPlace"
+            app:layout_constraintStart_toStartOf="@+id/barrierLabel"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal2"
+            android:id="@+id/fieldPlayer"
             android:hint="@string/default_number_value"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
@@ -101,60 +101,60 @@
             android:inputType="numberDecimal"
             android:minHeight="48dp"
             android:text="@string/default_number_value"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/labelPlayer"
+            app:layout_constraintStart_toEndOf="@+id/barrierLabel"
             android:importantForAutofill="no" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonPlacePlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:text="@string/main_button_plus"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberDecimal"
-            app:layout_constraintEnd_toStartOf="@+id/button4"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fieldPlace"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPlaceMinus"
             app:layout_constraintHorizontal_weight="1"
-            app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal"
+            app:layout_constraintStart_toEndOf="@+id/fieldPlace"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttonPlaceMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="@string/main_button_minus"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonPlacePlus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintVertical_weight="1"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/buttonPlayerPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main_button_plus"
-            app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberDecimal2"
-            app:layout_constraintEnd_toStartOf="@+id/button8"
-            app:layout_constraintStart_toEndOf="@+id/editTextNumberDecimal2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fieldPlayer"
+            app:layout_constraintEnd_toStartOf="@+id/buttonPlayerMinus"
+            app:layout_constraintStart_toEndOf="@+id/fieldPlayer"
             app:layout_constraintVertical_weight="1" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/buttonPlayerMinus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/main_button_minus"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button7"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonPlayerPlus"
+            app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
             app:layout_constraintVertical_weight="1" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/labelAwaitingValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/main_label_awaiting_value"
-            app:layout_constraintBottom_toTopOf="@+id/guidline_bottom"
-            app:layout_constraintStart_toEndOf="@+id/barrier2" />
+            app:layout_constraintBottom_toTopOf="@+id/guidlineBottom"
+            app:layout_constraintStart_toEndOf="@+id/barrierLabel" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
